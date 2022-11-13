@@ -3,7 +3,7 @@
 // в масиві array. Кожен наступний проміс повинен виконатись лише тоді коли попередній успішно завершився.
 // Функція `arrayHandler` приймає аргументом значення з поточної ітерації масиву `array`
 
-export const arrayHandler = (num) => {
+const arrayHandler = (num) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(num)
@@ -13,4 +13,10 @@ export const arrayHandler = (num) => {
 
 const array = [1, 2, 3, 4, 5]
 
+Promise.all(
+	array.map((num) =>
+		arrayHandler(num)
+			.then((result) => console.log(result))
+	)
+)
 console.log(array)

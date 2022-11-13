@@ -6,16 +6,16 @@ function sum (a, b) { return a + b } // for test
 // eslint-disable-next-line
 function memoize(fn) {
 	// fn ваш код тут...
-	const cache = new Map();
+	const cache = new Map()
 	return (...arg) => {
-		const key = JSON.stringify(arg);
+		const key = JSON.stringify(arg)
 		if (cache.has(key)) {
-			return cache.get(key);
+			return cache.get(key)
 		}
-		const result = fn(...arg);
-		cache.set(key, result);
-		return result;
-	};
+		const result = fn(...arg)
+		cache.set(key, result)
+		return result 
+	}
 }
 
 // приклад виконання вашого коду
