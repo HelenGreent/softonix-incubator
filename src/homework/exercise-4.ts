@@ -37,16 +37,16 @@ class Collection<T> {
   }
 
   contains (predicate: (el: T) => boolean): boolean {
-      return this.elements.some(predicate)
-    }
+      return this.elements.some(el => el === predicate)
+  }
 
   delete (predicate: (el: T) => boolean) {
     this.elements = this.elements.filter(el => el !== predicate(el))
   }
 }
 
-const stringCollection = new Collection()
-stringCollection.add(['Hello, World!'])
+const stringCollection = new Collection<string>()
+stringCollection.add('Hello, World!')
 stringCollection.contains(el => el === 'Hello, TS')
 
 const strings = stringCollection.get()
