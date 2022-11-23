@@ -11,8 +11,7 @@ module.exports = {
     colors: {
       ...colors,
       primary: ' #E5E5E5',
-      // gray: '#6b7280',
-      'link-color': '#2E476B',
+      'blue-grey': '#2E476B',
       'primary-text-color': '#5B5F62',
       'primary-header-color': '#2D3134',
       'lightgrey-text-color': '#9498A4',
@@ -20,12 +19,14 @@ module.exports = {
       'accent-coral-color': '#F66F4D',
       'white-color': '#FAF8ED',
       'bg-white-color': '#FFFFFF',
+      // 'grey-color': '#5B5F62',
+      'form-bg': '#FFD482',
       'footer-header-color': '#2D3134',
       'footer-text-color': '#676A6C'
     },
     fontFamily: {
       main: ['Inter', 'sans-serif'],
-      logo: ['Sen', 'sans-serif'],
+      sen: ['Sen', 'sans-serif'],
       nav: ['Poppins', 'sans-serif']
     },
     extend: {}
