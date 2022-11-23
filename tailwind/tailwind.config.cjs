@@ -16,13 +16,13 @@ module.exports = {
       'primary-header-color': '#2D3134',
       'lightgrey-text-color': '#9498A4',
       'lightgrey-text-span-color': '#939597',
-      'accent-coral-color': '#F66F4D',
+      'coral-color': '#F66F4D',
       'white-color': '#FAF8ED',
       'bg-white-color': '#FFFFFF',
-      // 'grey-color': '#5B5F62',
-      'form-bg': '#FFD482',
-      'footer-header-color': '#2D3134',
-      'footer-text-color': '#676A6C'
+      'grey-color': '#5B5F62',
+      'warm-yellow': '#FFD482',
+      'dark-grey': '#2D3134',
+      'light-grey': '#676A6C'
     },
     fontFamily: {
       main: ['Inter', 'sans-serif'],

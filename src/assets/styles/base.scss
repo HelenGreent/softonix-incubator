@@ -89,11 +89,11 @@ a {
 }
 
 .footer-header {
-  @apply font-main font-medium text-[18px] text-footer-header-color mb-[22px] leading-[18px];
+  @apply mb-2 font-main font-medium text-[18px] text-dark-grey xl:mb-[22px] xl:leading-[18px];
 }
 
 .footer-text {
-  @apply font-main font-normal text-[14px] text-footer-text-color leading-[34px];
+  @apply leading-7 font-main font-normal text-[14px] text-light-grey xl:leading-[34px];
 }
 
 img,
