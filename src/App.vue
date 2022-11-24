@@ -5,19 +5,19 @@
       <div class="flex items-center">
         <div class="flex items-center ">
           <img class="mr-1.5" src="./assets/images/logo.svg" alt="logo">
-          <p class="text-xl font-sen font-normal">Salty</p>
+          <p class="text-xl font-sen font-normal text-dark-grey">Salty</p>
         </div>
-        <nav class="hidden xl:flex font-main ml-[72px] text-blue-grey tracking-[.16px]">
-          <a href="#" class="ml-9">Home</a>
-          <a href="#" class="ml-9">About us</a>
-          <a href="#" class="ml-9">Destinations</a>
-          <a href="#" class="ml-9">Tours</a>
-          <a href="#" class="ml-9">Blog</a>
+        <nav class="hidden xl:flex font-inter ml-[72px] text-blue-grey tracking-[.16px]">
+          <a href="#" class="ml-9 nav-hover">Home</a>
+          <a href="#" class="ml-9 nav-hover">About us</a>
+          <a href="#" class="ml-9 nav-hover">Destinations</a>
+          <a href="#" class="ml-9 nav-hover">Tours</a>
+          <a href="#" class="ml-9 nav-hover">Blog</a>
         </nav>
       </div>
       <div class="hidden xl:flex">
         <button class="flex justify-center items-center w-[170px] h-[54px] btn border-2 border-coral-color">
-          <span class="mr-1.5 text-coral-color font-nav font-medium">Book Now</span>
+          <span class="mr-1.5 text-coral-color font-poppins font-medium">Book Now</span>
           <img src="./assets/images/red-arrow.svg" alt="arrow-book-now">
         </button>
       </div>
@@ -30,16 +30,17 @@
     <main>
       <section class="xl:flex justify-between">
         <div class="mt-12 xl:mt-[108px]">
-          <h1 class="text-4xl font-sen font-bold text-primary-header-color xl:text-[84px] xl:leading-[86px]">Discover the <br class="hidden xl:inline-block">Best Lovely<br>Places</h1>
-          <p class="max-w-[500px] text-sm mt-4 font-main font-normal text-primary-text-color leading-6 tracking-wide xl:max-w-[490px] xl:mt-[26px] xl:text-lg xl:leading-7">Plan and book your perfect trip with expert advice, travel tips, destination information and inspiration from us.</p>
-          <div class=" max-w-lg flex items-center h-[76px] mt-11 pl-7 pr-[20px] bg-bg-white-color  rounded-[100px]">
-            <div class="mr-[68px]">
+          <h1 class="text-4xl font-sen font-bold text-dark-grey xl:text-[84px] xl:leading-[86px]">Discover the <br class="hidden xl:inline-block">Best Lovely<br>Places</h1>
+          <p class="max-w-[500px] text-sm mt-4 font-inter font-normal text-grey-color leading-6 tracking-normal xl:max-w-[490px] xl:mt-[26px] xl:text-lg xl:leading-7">Plan and book your perfect trip with expert advice, travel tips, destination information and inspiration from us.</p>
+          <div class=" max-w-lg flex items-center font-inter h-[76px] mt-11 pl-7 pr-[20px] bg-white-color  rounded-[100px]">
+            <div>
               <p class="search-input-header">Where</p>
               <div class="flex truncate">
                 <p class="search-input-text truncate">Center Point, Lo...</p>
                 <img src="./assets/images/point.svg" alt="point">
               </div>
             </div>
+            <hr class="h-[44px] w-[1px] m-[34px] bg-divider-color">
             <div>
               <p class="search-input-header">Date</p>
               <div class="flex">
@@ -76,7 +77,7 @@
             alt="map"
           >
           <div
-            class="w-[133px] h-[146px] bg-bg-white-color rounded-[10px] absolute bottom-11 -left-11"
+            class="w-[133px] h-[146px] bg-white-color rounded-[10px] absolute bottom-11 -left-11"
           >
             <img src="./assets/images/desert.svg" alt="desert">
             <div
@@ -109,19 +110,19 @@
       <section class="mt-16 xl:mt-44">
         <div class="flex justify-between items-start">
           <div>
-            <h1 class="text-4xl font-main font-semibold  leading-[56px] xl:text-[56px]">Categories</h1>
-            <p class="max-w-[370px] mt-6 font-main font-normal text-base text-primary-text-color leading-[26px] tracking-wide">Here are lots of interesting destinations to visit, but don’t be confused—they’re already grouped by category.</p>
+            <h1 class="text-4xl font-inter font-semibold  leading-[56px] text-dark-grey xl:text-[56px]">Categories</h1>
+            <p class="max-w-[370px] mt-6 font-inter font-normal text-base text-grey-color leading-[26px] tracking-wide">Here are lots of interesting destinations to visit, but don’t be confused—they’re already grouped by category.</p>
           </div>
           <div class="flex justify-center flex-row">
             <div class="slider-btn">
               <img class="pt-[20px] pl-[21px]" src="./assets/images/dark-arrow.svg" alt="left-button">
             </div>
-            <div class="slider-btn ml-[16px] bg-primary-header-color">
+            <div class="slider-btn ml-[16px] bg-dark-grey">
               <img class="pt-[20px] pl-[23px]" src="./assets/images/light-arrow.svg" alt="right-button">
             </div>
           </div>
         </div>
-        <div class="flex flex-wrap mt-[60px] text-xl text-center font-main font-medium text-primary-header-color xl:flex-nowrap xl:shrink xl:text-[26px]">
+        <div class="flex flex-wrap mt-[60px] text-xl text-center font-inter font-medium text-dark-grey xl:flex-nowrap xl:shrink xl:text-[26px]">
           <figure class="pl-[20px] xl:pl-[30px] xl:p-0">
             <img class="w-[170px]" src="./assets/images/beach.png" alt="Beach">
             <figcaption class="pt-[18px] leading-[26px]">Beach</figcaption>
@@ -156,49 +157,49 @@
           >
             <img class="pt-[20px]" src="./assets/images/destination-icon.svg" alt="destinations">
             <p class="pt-[20px] font-semibold text-[30px] text-coral-color">600%</p>
-            <span class="pt-1 font-normal text-[21px] leading-[29px]  text-lightgrey-text-span-color">Destinations</span>
+            <span class="pt-1 font-normal text-[21px] leading-[29px]  text-lightgrey-text">Destinations</span>
           </div>
           <div
             class="absolute bottom-[122px] -right-2.5 px-[21px] py-[20px] bg-white rounded-[10px] w-[171px]"
           >
             <div class="flex items-center mb-[10px]">
               <img class="mr-[16px]" src="./assets/images/signal-icon.svg" alt="signal">
-              <p class="font-semibold text-2xl text-primary-header-color">5000+</p>
+              <p class="font-semibold text-2xl text-dark-grey">5000+</p>
             </div>
-            <span class="ml-[38px] font-nav font-normal text-lightgrey-text-span-color">Customers</span>
+            <span class="ml-[38px] font-poppins font-normal text-lightgrey-text">Customers</span>
           </div>
         </div>
 
-        <div class="pt-8 font-main xl:pl-[153px] xl:pt-16">
+        <div class="pt-8 font-inter xl:pl-[153px] xl:pt-16">
           <h1 class="font-semibold text-xl text-coral-color leading-5 tracking-[4px]">Our Experience</h1>
-          <h2 class="text-4xl pt-5 font-semibold text-primary-header-color xl:leading-[66px] xl:text-[56px]">Our Stories Have <br class="hidden xl:inline"> Adventures</h2>
-          <p class="max-w-[456px] pt-5 font-normal text-base text-primary-text-color">
+          <h2 class="text-4xl pt-5 font-semibold text-dark-grey xl:leading-[66px] xl:text-[56px]">Our Stories Have <br class="hidden xl:inline"> Adventures</h2>
+          <p class="max-w-[456px] pt-5 font-normal text-base text-grey-color">
             We are experienced in bringing adventures to stay their journey, with all outdoor destinations in the world as our specialties. Start your adventure now! Nature has already called you!
           </p>
           <div class="flex justify-center pt-[40px]">
             <div class="card-bg ">
               <p class="font-semibold text-[46px] text-coral-color">12K+</p>
-              <span class="font-normal text-[21px] leading-[29px]  text-lightgrey-text-span-color tracking-wide">Success <br> Journey</span>
+              <span class="font-normal text-[21px] leading-[29px]  text-lightgrey-text tracking-wide">Success <br> Journey</span>
             </div>
             <div class="card-bg mx-[20px]">
               <p class=" font-semibold text-[46px] text-coral-color">16+</p>
-              <span class="font-normal text-[21px] leading-[29px]  text-lightgrey-text-span-color tracking-wide">Awards <br> Winning</span>
+              <span class="font-normal text-[21px] leading-[29px]  text-lightgrey-text tracking-wide">Awards <br> Winning</span>
             </div>
             <div class="card-bg">
               <p class="font-semibold text-[46px] text-coral-color">20+</p>
-              <span class="font-normal text-[21px] leading-[29px] text-lightgrey-text-span-color tracking-wide">Years Of <br> Experience</span>
+              <span class="font-normal text-[21px] leading-[29px] text-lightgrey-text tracking-wide">Years Of <br> Experience</span>
             </div>
           </div>
         </div>
       </section>
       <section class="mt-16 xl:mt-28">
         <div class="flex justify-between items-center">
-          <h1 class="text-4xl font-main font-semibold xl:text-[56px] xl:leading-[66px]">Find Popular <br> Destination</h1>
+          <h1 class="text-4xl font-inter font-semibold text-dark-grey xl:text-[56px] xl:leading-[66px]">Find Popular <br> Destination</h1>
           <div class="flex justify-center flex-row">
             <div class="slider-btn">
               <img class="pt-[20px] pl-[21px]" src="./assets/images/dark-arrow.svg" alt="left-button">
             </div>
-            <div class="slider-btn ml-[16px] bg-primary-header-color">
+            <div class="slider-btn ml-[16px] bg-dark-grey">
               <img class="pt-[20px] pl-[23px]" src="./assets/images/light-arrow.svg" alt="right-button">
             </div>
           </div>
@@ -210,7 +211,7 @@
             <p class="tour-text">Mountain Hiking Tour</p>
             <div class="flex">
               <p class="tour-price">$99<span class="tour-price-span">/Person</span></p>
-              <a class="book-btn  hover:bg-primary-header-color hover:text-bg-white-color ease-in-out duration-300" href="#">
+              <a class="book-btn  hover:bg-dark-grey hover:text-white-color ease-in-out duration-300" href="#">
                 <p class="book-btn-text">Book Now</p>
               </a>
             </div>
@@ -221,7 +222,7 @@
             <p class="tour-text">Machu Picchu, Peru</p>
             <div class="flex">
               <p class="tour-price">$99<span class="tour-price-span">/Person</span></p>
-              <a class="book-btn hover:bg-primary-header-color hover:text-bg-white-color ease-in-out duration-300" href="#">
+              <a class="book-btn hover:bg-dark-grey hover:text-white-color ease-in-out duration-300" href="#">
                 <p class="book-btn-text">Book Now</p>
               </a>
             </div>
@@ -232,7 +233,7 @@
             <p class="tour-text">The Grand Canyon, Arizona</p>
             <div class="flex">
               <p class="tour-price">$99<span class="tour-price-span">/Person</span></p>
-              <a class="book-btn hover:bg-primary-header-color hover:text-bg-white-color ease-in-out duration-300" href="#">
+              <a class="book-btn hover:bg-dark-grey hover:text-white-color ease-in-out duration-300" href="#">
                 <p class="book-btn-text">Book Now</p>
               </a>
             </div>
@@ -241,27 +242,27 @@
       </section>
       <section class="mt-16 xl:mt-32">
         <div>
-          <h2 class="text-4xl font-main font-semibold xl:text-[56px] xl:leading-[66px] text-primary-header-color text-center">
+          <h2 class="text-4xl font-inter font-semibold xl:text-[56px] xl:leading-[66px] text-dark-grey text-center">
             Top Destinations
           </h2>
-          <p class="text-center font-main text-primary-text-color mt-4 mb-5">
+          <p class="text-center font-inter text-grey-color mt-4 mb-5">
             Sost Brilliant reasons Entrada should be your one-stop-shop!
           </p>
           <div class="flex flex-wrap justify-center">
             <a href="#" class="mr-3.5 pb-2 xl:pb-0">
-              <p class="city-btn hover:bg-primary-header-color hover:text-white-color ease-in-out duration-300">London</p>
+              <p class="city-btn hover:bg-dark-grey hover:text-warm-white ease-in-out duration-300">London</p>
             </a>
             <a href="#" class="mr-3.5 pb-2 xl:pb-0">
-              <p class="city-btn hover:bg-primary-header-color hover:text-white-color ease-in-out duration-300">Bangkok</p>
+              <p class="city-btn hover:bg-dark-grey hover:text-warm-white ease-in-out duration-300">Bangkok</p>
             </a>
             <a href="#" class="mr-3.5 pb-2 xl:pb-0">
-              <p class="city-btn hover:bg-primary-header-color hover:text-white-color ease-in-out duration-300">England</p>
+              <p class="city-btn hover:bg-dark-grey hover:text-warm-white ease-in-out duration-300">England</p>
             </a>
             <a href="#" class="mr-3.5 pb-2 xl:pb-0">
-              <p class="city-btn hover:bg-primary-header-color hover:text-white-color ease-in-out duration-300">Singapore</p>
+              <p class="city-btn hover:bg-dark-grey hover:text-warm-white ease-in-out duration-300">Singapore</p>
             </a>
             <a href="#" class="mr-3.5 pb-2 xl:pb-0">
-              <p class="city-btn hover:bg-primary-header-color hover:text-white-color ease-in-out duration-300">Italy</p>
+              <p class="city-btn hover:bg-dark-grey hover:text-warm-white ease-in-out duration-300">Italy</p>
             </a>
           </div>
         </div>
@@ -289,7 +290,7 @@
           <div class="grid3">
             <figure class="relative">
               <img class="h-[517px]" src="./assets/images/vietnam-3.png" alt="vietnam">
-              <span class="figcaption-light">3.5</span>
+              <span class="figcaption-dark">3.5</span>
               <div class="absolute left-6 bottom-6 flex flex-col">
                 <figcaption class="figcaption-country">Vientam</figcaption>
                 <figcaption class="figcaption-city">Worefall</figcaption>
@@ -332,11 +333,11 @@
         <img class="w-60 mx-auto xl:w-[400px] p-2" src="./assets/images/traveler-3.png" alt="traveler">
         <div class="mt-[51px]">
           <hr class="w-16 mb-3 border-4 rounded-full border-warm-yellow">
-          <h2 class="text-4xl font-main font-semibold text-primary-header-color tracking-normal xl:text-[56px] xl:leading-[66px]">
+          <h2 class="text-4xl font-inter font-semibold text-dark-grey tracking-normal xl:text-[56px] xl:leading-[66px]">
             A Customer Said <br class="hidden xl:inline">About Us:
           </h2>
-          <div class="max-w-[537px] mt-[27px] p-[30px] bg-bg-white-color rounded-[14px]">
-            <p class="max-w-[473px] font-main text-lg text-grey-color mb-[26px] leading-8 tracking-wide">
+          <div class="max-w-[537px] mt-[27px] p-[30px] bg-white-color rounded-[14px]">
+            <p class="max-w-[473px] font-inter text-lg text-grey-color mb-[26px] leading-8 tracking-wide">
               Salty helped me a lot in finding the best place for our
               first outdoor adventure trip. They responded very
               quickly and gave me a detailed account of the place—
@@ -351,10 +352,10 @@
             </div>
             <div class="flex mt-[17px]">
               <div>
-                <p class="font-main text-xl font-medium text-primary-header-color leading-5 mb-2">
+                <p class="font-inter text-xl font-medium text-dark-grey leading-5 mb-2">
                   Andrew Sarma
                 </p>
-                <p class="font-main font-normal text-xs leading-3 text-primary-text-color">
+                <p class="font-inter font-normal text-xs leading-3 text-grey-color">
                   Enterpreneur
                 </p>
               </div>
@@ -362,7 +363,7 @@
                 <div class="slider-btn-small">
                   <img class="pt-[13px] pl-[15px]" src="./assets/images/dark-arrow.svg" alt="left-button">
                 </div>
-                <div class="slider-btn-small ml-[16px] bg-primary-header-color">
+                <div class="slider-btn-small ml-[16px] bg-dark-grey">
                   <img class="pt-[13px] pl-[15px]" src="./assets/images/light-arrow.svg" alt="right-button">
                 </div>
               </div>
@@ -373,15 +374,15 @@
       <section class="mt-16 xl:mt-32 relative">
         <img class="absolute w-full" src="./assets/images/curved-lines.svg">
         <div class="max-w-[537px] bg-warm-yellow py-[75px] rounded-[30px] xl:max-w-none">
-          <h2 class="text-4xl mb-[16px] text-center font-main font-semibold text-dark-grey tracking-[0.15px] xl:text-[40px] xl:leading-10">
+          <h2 class="text-4xl mb-[16px] text-center font-inter font-semibold text-dark-grey tracking-[0.15px] xl:text-[40px] xl:leading-10">
             Sign up to our newsletter
           </h2>
-          <p class="max-w-[415px] mx-[auto] mb-10 font-main text-base leading-7 text-center text-grey-color tracking-wide">
+          <p class="max-w-[415px] mx-[auto] mb-10 font-inter text-base leading-7 text-center text-grey-color tracking-wide">
             Review latest news, update, and many other things every week.
           </p>
           <form class="relative flex content-center px-[10px] py-[8px] bg-white w-[450px] rounded-[12px] mx-[auto]">
             <input
-              class="w-full pl-6 text-sm leading-7 tracking-wide placeholder:text-[14px] placeholder:leading-7"
+              class="w-full pl-6 text-sm leading-7 tracking-wide placeholder:text-[14px] placeholder:leading-7 placeholder:opacity-40"
               type="text"
               placeholder="Enter Your email address"
             >
@@ -396,9 +397,9 @@
       <div class="mr-16">
         <div class="flex items-center">
           <img class="mr-1.5" src="./assets/images/logo.svg" alt="logo">
-          <p class="text-xl font-sen font-normal">Salty</p>
+          <p class="text-xl font-sen font-normal text-dark-grey">Salty</p>
         </div>
-        <p class="mt-5 mb-4 font-main text-base text-primary-text-color leading-[26px] max-w-[141px] xl:mb-10">
+        <p class="mt-5 mb-4 font-inter text-base text-grey-color leading-[26px] max-w-[141px] xl:mb-10">
           Enjoy the touring with Salty
         </p>
         <div class="flex">
@@ -455,6 +456,24 @@
 .app-container {
   max-width: 1440px;
   padding: 24px 135px 80px 135px;
+}
+
+.nav-hover:after {
+  content: '';
+  height: 2px;
+  width: 0%;
+  background-color: orange;
+  display: block;
+  transition: .5s ease-in-out;
+}
+
+.nav-hover:hover::after {
+  content: '';
+  height: 2px;
+  width: 30%;
+  background-color: #F66F4D;
+  display: block;
+  transition: .5s ease-in-out;
 }
 
 .parent-grid {

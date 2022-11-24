@@ -10,24 +10,22 @@ module.exports = {
   theme: {
     colors: {
       ...colors,
-      primary: ' #E5E5E5',
       'blue-grey': '#2E476B',
-      'primary-text-color': '#5B5F62',
-      'primary-header-color': '#2D3134',
-      'lightgrey-text-color': '#9498A4',
-      'lightgrey-text-span-color': '#939597',
-      'coral-color': '#F66F4D',
-      'white-color': '#FAF8ED',
-      'bg-white-color': '#FFFFFF',
-      'grey-color': '#5B5F62',
-      'warm-yellow': '#FFD482',
       'dark-grey': '#2D3134',
-      'light-grey': '#676A6C'
+      'light-grey': '#676A6C',
+      'divider-color': '#EAEAEB',
+      'lightgrey-input': '#9498A4',
+      'lightgrey-text': '#939597',
+      'coral-color': '#F66F4D',
+      'warm-white': '#FAF8ED',
+      'white-color': '#FFFFFF',
+      'grey-color': '#5B5F62',
+      'warm-yellow': '#FFD482'
     },
     fontFamily: {
-      main: ['Inter', 'sans-serif'],
+      inter: ['Inter', 'sans-serif'],
       sen: ['Sen', 'sans-serif'],
-      nav: ['Poppins', 'sans-serif']
+      poppins: ['Poppins', 'sans-serif']
     },
     extend: {}
   },

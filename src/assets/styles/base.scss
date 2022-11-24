@@ -17,11 +17,11 @@ a {
 }
 
 .search-input-header {
-  @apply mb-2 text-lg leading-4;
+  @apply mb-2 font-medium text-lg leading-4 text-dark-grey;
 }
 
 .search-input-text {
-  @apply mr-[26px] text-xs leading-3 text-lightgrey-text-color cursor-pointer;
+  @apply mr-[26px] font-normal text-xs leading-3 text-lightgrey-input cursor-pointer;
 }
 
 .btn {
@@ -29,47 +29,47 @@ a {
 }
 
 .slider-btn {
-  @apply w-[54px] h-[54px] border border-primary-header-color rounded-full cursor-pointer;
+  @apply w-[54px] h-[54px] border border-dark-grey rounded-full cursor-pointer;
 }
 
 .slider-btn-small {
-  @apply w-10 h-10 border border-primary-header-color rounded-full cursor-pointer;
+  @apply w-10 h-10 border border-dark-grey rounded-full cursor-pointer;
 }
 
 .card-bg {
-  @apply w-[166px] h-[178px] p-4 text-center bg-bg-white-color rounded-[14px];
+  @apply w-[166px] h-[178px] p-4 text-center bg-white-color rounded-[14px];
 }
 
 .tour-card {
-  @apply w-[386px] mr-[30px] px-3 pt-3 pb-9 border-2 border-bg-white-color rounded-[16px] text-ellipsis;
+  @apply w-[386px] mr-[30px] px-3 pt-3 pb-9 border-2 border-white-color rounded-[16px] text-ellipsis;
 }
 
 .tour-header {
-  @apply mt-6 mb-3.5 font-main font-semibold text-2xl leading-6 text-primary-header-color text-ellipsis;
+  @apply mt-6 mb-3.5 font-inter font-semibold text-2xl leading-6 text-dark-grey text-ellipsis;
 }
 
 .tour-text {
-  @apply font-main mb-[35px] text-sm leading-[14px] text-primary-text-color text-ellipsis;
+  @apply font-inter mb-[35px] text-sm leading-[14px] text-grey-color text-ellipsis;
 }
 
 .tour-price {
-  @apply font-main font-semibold text-2xl text-primary-header-color leading-5;
+  @apply font-inter font-semibold text-2xl text-dark-grey leading-5;
 }
 
 .tour-price-span {
-  @apply font-main text-base font-normal text-primary-text-color leading-5;
+  @apply font-inter text-base font-normal text-grey-color leading-5;
 }
 
 .book-btn {
-  @apply w-[100px] h-[37px] ml-[auto] flex justify-center items-center border text-primary-header-color bg-white-color border-primary-header-color rounded-[46px];
+  @apply w-[100px] h-[37px] ml-[auto] flex justify-center items-center border text-dark-grey bg-warm-white border-dark-grey rounded-[46px];
 }
 
 .book-btn-text {
-  @apply font-main text-[14px] leading-[14px];
+  @apply font-inter text-[14px] leading-[14px];
 }
 
 .city-btn {
-  @apply px-5 py-2.5 font-nav text-sm leading-[14px] rounded-[30px] text-primary-header-color bg-white-color border border-primary-header-color;
+  @apply px-5 py-2.5 font-poppins text-sm leading-[14px] rounded-[30px] text-dark-grey bg-warm-white border border-dark-grey;
 }
 
 .figcaption-light {
@@ -77,23 +77,23 @@ a {
 }
 
 .figcaption-dark {
-  @apply absolute top-6 left-6 bg-primary-header-color text-white text-sm px-2.5 py-1.5 rounded-[16px];
+  @apply absolute top-6 left-6 bg-dark-grey text-white text-sm px-2.5 py-1.5 rounded-[16px];
 }
 
 .figcaption-country {
-  @apply font-main font-semibold text-xl text-white;
+  @apply font-inter font-semibold text-xl text-white;
 }
 
 .figcaption-city {
-  @apply font-main text-sm text-white;
+  @apply font-inter text-sm text-white;
 }
 
 .footer-header {
-  @apply mb-2 font-main font-medium text-[18px] text-dark-grey xl:mb-[22px] xl:leading-[18px];
+  @apply mb-2 font-inter font-medium text-[18px] text-dark-grey xl:mb-[22px] xl:leading-[18px];
 }
 
 .footer-text {
-  @apply leading-7 font-main font-normal text-[14px] text-light-grey xl:leading-[34px];
+  @apply leading-7 font-inter font-normal text-[14px] text-light-grey xl:leading-[34px];
 }
 
 img,
