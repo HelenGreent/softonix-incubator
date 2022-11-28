@@ -1,8 +1,23 @@
 <template>
   <div class="max-w-[1440px] p-6">
-    <h3 class="font-medium m-0">Contact list</h3>
+    <div class="flex content-center items-center space-x-5">
+      <h3 class="font-medium m-0">Contact list</h3>
+      <button
+        class="px-3 py-2 font-medium rounded-md text-white bg-sky-600 cursor-pointer hover:bg-sky-700"
+        @click="newForm = true"
+      >
+        &#43; Add contact
+      </button>
+    </div>
 
     <div class="contact-list grid-cols-[repeat(auto-fill,_minmax(320px,_1fr))] grid gap-5 my-5">
+      <ContactItem
+        v-if="newForm"
+        is-new
+        :contact="{name: '', description: '', image: '', id: 0}"
+        @cancel="ContactCancel"
+        @create="addContact"
+      />
       <ContactItem
         v-for="(contact, index) in contacts"
         :key="contact.id"
@@ -46,5 +61,16 @@ function deleteContact (index: number) {
 
 function onContactSave (contact: IContact, index: number) {
   contacts.value[index] = { ...contact }
+}
+
+const newForm = ref(false)
+
+function addContact (contact: IContact) {
+  newForm.value = false
+  contacts.value.unshift(contact)
+}
+
+function ContactCancel () {
+  newForm.value = false
 }
 </script>
