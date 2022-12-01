@@ -4,6 +4,8 @@
       <div class="space-y-4">
         <AppInput v-model.trim="contactForm.name" placeholder="Name" />
 
+        <AppInput v-model.trim="contactForm.role" placeholder="Role" />
+
         <AppInput v-model.trim="contactForm.description" placeholder="Description" />
 
         <AppInput v-model.trim="contactForm.image" placeholder="Image Link" />
@@ -62,6 +64,7 @@ const contactForm = reactive<IContact>(currentContact.value
   : {
     id: contacts.value.length + 1,
     name: '',
+    role: '',
     description: '',
     image: ''
   })

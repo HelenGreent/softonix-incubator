@@ -33,14 +33,17 @@ import IconPlus from '@/components/icons/IconPlus.vue'
 import FilterSortFrom from '@/components/FilterSortForm.vue'
 import type { ISortParams } from '@/types'
 import { ref, computed } from 'vue'
+
 const router = useRouter()
 const contactsStore = useContactsStore()
 const { updateContact, deleteContact, sortByAscDsc } = contactsStore
+
 const searchParams = ref<ISortParams>({
   search: '',
   roles: [],
   sort: 'def'
 })
+
 const showContacts = computed(() => {
   return sortByAscDsc(searchParams.value)
 })
