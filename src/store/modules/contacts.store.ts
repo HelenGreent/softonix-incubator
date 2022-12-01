@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
-import type { IContact } from '@/types'
+import type { IContact, ISortParams } from '@/types'
 
 export const useContactsStore = defineStore('contactsStore', () => {
   const contacts = ref<IContact[]>([
@@ -8,21 +8,31 @@ export const useContactsStore = defineStore('contactsStore', () => {
       id: 1,
       name: 'Esther Howard',
       description: 'Forward Response Developer',
+      role: 'Employee',
       image: 'https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60'
     },
     {
       id: 2,
       name: 'Jane Cooper',
       description: 'Regional Paradigm Technician Regional Paradigm Technician Regional Paradigm Technician',
+      role: 'Contributor',
       image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60'
     },
     {
       id: 3,
-      name: 'Cody Fisher',
+      name: 'Manager',
       description: 'Product Directives Officer',
+      role: 'Manager',
       image: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60'
     }
   ])
+
+  function sortByAscDsc (params: Partial<ISortParams>) {
+    const filtered = [...contacts.value]
+    if (!params.sort || params.sort === 'def') return filtered
+    if (params.sort === 'asc') return filtered.sort((a, b) => a.name.localeCompare(b.name))
+    return filtered.sort((a, b) => b.name.localeCompare(a.name))
+  }
 
   function addContact (contact: IContact) {
     contacts.value.push(contact)
@@ -42,6 +52,7 @@ export const useContactsStore = defineStore('contactsStore', () => {
     contacts,
     addContact,
     deleteContact,
-    updateContact
+    updateContact,
+    sortByAscDsc
   }
 })

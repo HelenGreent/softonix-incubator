@@ -8,11 +8,13 @@
       </template>
       Add Contact
     </AppButton>
+
+    <FilterSortFrom v-model="searchParams" />
   </div>
 
   <div class="grid-cols-[repeat(auto-fill,_minmax(320px,_1fr))] grid gap-5 my-5">
     <ContactItem
-      v-for="contact in contacts"
+      v-for="contact in showContacts"
       :key="contact.id"
       class="cursor-pointer"
       :contact="contact"
@@ -24,18 +26,24 @@
 </template>
 <script lang="ts" setup>
 import { useRouter } from 'vue-router'
-import { storeToRefs } from 'pinia'
 import { useContactsStore } from '@/store'
-
 import ContactItem from '@/components/ContactItem.vue'
 import AppButton from '@/components/AppButton.vue'
 import IconPlus from '@/components/icons/IconPlus.vue'
-
+import FilterSortFrom from '@/components/FilterSortForm.vue'
+import type { ISortParams } from '@/types'
+import { ref, computed } from 'vue'
 const router = useRouter()
-
 const contactsStore = useContactsStore()
-const { contacts } = storeToRefs(contactsStore)
-const { updateContact, deleteContact } = contactsStore
+const { updateContact, deleteContact, sortByAscDsc } = contactsStore
+const searchParams = ref<ISortParams>({
+  search: '',
+  roles: [],
+  sort: 'def'
+})
+const showContacts = computed(() => {
+  return sortByAscDsc(searchParams.value)
+})
 
 function createNewContact () {
   router.push({ name: 'upsertContact', params: { contactId: 'new' } })
