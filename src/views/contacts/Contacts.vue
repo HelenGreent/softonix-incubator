@@ -18,7 +18,12 @@
     </el-button>
   </div>
 
-  <div class="grid-cols-[repeat(auto-fill,_minmax(320px,_1fr))] grid gap-5 my-5">
+  <el-tabs v-model="activeTab">
+    <el-tab-pane label="Card" name="Card" />
+    <el-tab-pane label="Table" name="Table" />
+  </el-tabs>
+
+  <div v-if="activeTab === 'Card'" class="grid-cols-[repeat(auto-fill,_minmax(320px,_1fr))] grid gap-5 my-5">
     <ContactItem
       v-for="contact in contacts"
       :key="contact.id"
@@ -29,7 +34,9 @@
       @save="updateContact"
     />
   </div>
+  <ContactTable v-else @edit="editContact" />
 </template>
+
 <script lang="ts" setup>
 const router = useRouter()
 const { $routeNames } = useGlobalProperties()
@@ -45,4 +52,6 @@ function createNewContact () {
 function editContact (contactId: number) {
   router.push({ name: $routeNames.upsertContact, params: { contactId } })
 }
+
+const activeTab = ref<'Card' | 'Table'>('Card')
 </script>
