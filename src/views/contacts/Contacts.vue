@@ -17,8 +17,8 @@
     </el-button>
   </div>
 
-  <el-tabs tabPosition="top">
-    <el-tab-pane label="Card" name="first">
+  <el-tabs v-model="activeTab" tabPosition="top">
+    <el-tab-pane label="Card" name="Card">
       <div class="grid-cols-[repeat(auto-fill,_minmax(320px,_1fr))] grid gap-5 my-5">
         <ContactItem
           v-for="contact in contacts"
@@ -31,7 +31,7 @@
         />
       </div>
     </el-tab-pane>
-    <el-tab-pane label="Table" name="second">
+    <el-tab-pane label="Table" name="Table">
       <ContactTable @edit="editContact" />
     </el-tab-pane>
   </el-tabs>
@@ -52,4 +52,5 @@ function createNewContact () {
 function editContact (contactId: number) {
   router.push({ name: $routeNames.upsertContact, params: { contactId } })
 }
+const activeTab = ref('Card')
 </script>
