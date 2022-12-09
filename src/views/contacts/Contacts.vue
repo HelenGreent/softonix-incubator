@@ -10,7 +10,6 @@
     </el-button>
 
     <el-button
-      class="!ml-0"
       :type="$elComponentType.danger"
       @click="$router.replace({ name: $routeNames.login })"
     >
@@ -18,23 +17,24 @@
     </el-button>
   </div>
 
-  <el-tabs v-model="activeTab">
-    <el-tab-pane label="Card" name="Card" />
-    <el-tab-pane label="Table" name="Table" />
+  <el-tabs tabPosition="top">
+    <el-tab-pane label="Card" name="first">
+      <div class="grid-cols-[repeat(auto-fill,_minmax(320px,_1fr))] grid gap-5 my-5">
+        <ContactItem
+          v-for="contact in contacts"
+          :key="contact.id"
+          class="cursor-pointer"
+          :contact="contact"
+          @click="editContact(contact.id)"
+          @delete="deleteContact"
+          @save="updateContact"
+        />
+      </div>
+    </el-tab-pane>
+    <el-tab-pane label="Table" name="second">
+      <ContactTable @edit="editContact" />
+    </el-tab-pane>
   </el-tabs>
-
-  <div v-if="activeTab === 'Card'" class="grid-cols-[repeat(auto-fill,_minmax(320px,_1fr))] grid gap-5 my-5">
-    <ContactItem
-      v-for="contact in contacts"
-      :key="contact.id"
-      class="cursor-pointer"
-      :contact="contact"
-      @click="editContact(contact.id)"
-      @delete="deleteContact"
-      @save="updateContact"
-    />
-  </div>
-  <ContactTable v-else @edit="editContact" />
 </template>
 
 <script lang="ts" setup>
@@ -52,6 +52,4 @@ function createNewContact () {
 function editContact (contactId: number) {
   router.push({ name: $routeNames.upsertContact, params: { contactId } })
 }
-
-const activeTab = ref<'Card' | 'Table'>('Card')
 </script>
