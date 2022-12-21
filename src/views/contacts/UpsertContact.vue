@@ -33,11 +33,9 @@
 </template>
 
 <script lang="ts" setup>
-import type { IContact } from '@/types'
-
-const { $routeNames } = useGlobalProperties()
 const router = useRouter()
 const route = useRoute()
+const { $routeNames } = useGlobalProperties()
 const { contacts, addContact, updateContact, deleteContact } = useContactsStore()
 
 const currentContact = computed(() => contacts.find(c => c.id === +route.params.contactId))
