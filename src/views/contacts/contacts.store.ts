@@ -10,18 +10,33 @@ export const useContactsStore = defineStore('contactsStore', () => {
       })
   }
 
-  function addContact (contact: IContact) {
-    contacts.value.push(contact)
+  async function addContact (contact: IContact) {
+    try {
+      await contactsService.addContact(contact)
+      contacts.value.push(contact)
+    } catch (error) {
+      console.warn(error)
+    }
   }
 
-  function updateContact (contact: IContact) {
-    const currentIndex = contacts.value.findIndex(c => c.id === contact.id)
-    contacts.value[currentIndex] = { ...contact }
+  async function updateContact (contact: IContact) {
+    try {
+      const currentIndex = contacts.value.findIndex(c => c.id === contact.id)
+      await contactsService.updateContact(contact)
+      contacts.value[currentIndex] = { ...contact }
+    } catch (err) {
+      console.error(err)
+    }
   }
 
-  function deleteContact (contact: IContact) {
-    const currentIndex = contacts.value.findIndex(c => c.id === contact.id)
-    contacts.value.splice(currentIndex, 1)
+  async function deleteContact (contact: IContact) {
+    try {
+      const currentIndex = contacts.value.findIndex(c => c.id === contact.id)
+      await contactsService.deleteContact(contact.id)
+      contacts.value.splice(currentIndex, 1)
+    } catch (err) {
+      console.error(err)
+    }
   }
 
   return {

@@ -7,11 +7,11 @@
 
       <el-form ref="formRef" label-position="top" :rules="formRules" :model="formModel" @submit.prevent="submit">
         <el-form-item label="Email" prop="email">
-          <el-input v-model="formModel.email" type="email" placeholder="voolve@gmail.com"/>
+          <el-input v-model="formModel.email" type="email" placeholder="voolve@gmail.com" />
         </el-form-item>
 
         <el-form-item label="Password" prop="password">
-          <el-input v-model="formModel.password" type="password" placeholder="11111111(8)"/>
+          <el-input v-model="formModel.password" type="password" placeholder="11111111(8)" />
         </el-form-item>
 
         <p class="pb-2.5 text-sm font-normal">
@@ -49,7 +49,7 @@ const formRules = useElFormRules({
   password: [useRequiredRule(), useMinLenRule(6)]
 })
 
-function submit() {
+function submit () {
   formRef.value?.validate(isValid => {
     if (isValid) {
       loading.value = true
