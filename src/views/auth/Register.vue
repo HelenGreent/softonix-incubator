@@ -2,29 +2,29 @@
   <div class="max-w-[500px] m-auto">
     <el-card v-loading="loading">
       <template #header>
-        <p class="font-semibold text-xl">Login</p>
+        <p class="font-semibold text-xl">Sign Up</p>
       </template>
 
       <el-form ref="formRef" label-position="top" :rules="formRules" :model="formModel" @submit.prevent="submit">
         <el-form-item label="Email" prop="email">
-          <el-input v-model="formModel.email" type="email" placeholder="voolve@gmail.com"/>
+          <el-input v-model="formModel.email" type="email" placeholder="DanielRaynolds@gmail.com" />
         </el-form-item>
 
         <el-form-item label="Password" prop="password">
-          <el-input v-model="formModel.password" type="password" placeholder="11111111(8)"/>
+          <el-input v-model="formModel.password" type="password" />
         </el-form-item>
 
         <p class="pb-2.5 text-sm font-normal">
-          Need an account?
+          Already a user?
           <router-link
             class="text-sky-700 uppercase hover:underline ease-in-out duration-300"
-            :to="{ name: $routeNames.register }">
-            Sign Up
+            :to="{ name: $routeNames.login }">
+            Login
           </router-link>
         </p>
 
         <el-button native-type="submit" :type="$elComponentType.primary">
-          Login
+          Sign Up
         </el-button>
       </el-form>
     </el-card>
@@ -34,7 +34,7 @@
 <script lang="ts" setup>
 const router = useRouter()
 const { $routeNames } = useGlobalProperties()
-const { login } = useAuthStore()
+const { register } = useAuthStore()
 
 const formRef = useElFormRef()
 
@@ -49,13 +49,13 @@ const formRules = useElFormRules({
   password: [useRequiredRule(), useMinLenRule(6)]
 })
 
-function submit() {
+function submit () {
   formRef.value?.validate(isValid => {
     if (isValid) {
       loading.value = true
 
-      login(formModel)
-        .then(() => router.push({ name: $routeNames.contacts }))
+      register(formModel)
+        .then(() => router.push({ name: $routeNames.login }))
         .finally(() => (loading.value = false))
     }
   })

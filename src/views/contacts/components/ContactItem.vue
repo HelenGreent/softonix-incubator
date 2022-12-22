@@ -25,19 +25,17 @@
       border border-gray-medium bg-gray-ultra-light"
       >
         <span
-          v-if="imageHasError || !contact.image"
           class="font-medium uppercase"
         >{{ nameAbbrv }}
         </span>
-
-        <img
+        <!-- <img
           v-else
           class="object-cover"
           src="https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
           alt="contact-logo"
           @error="imageHasError = true"
           @load="imageHasError = false"
-        >
+        > -->
       </div>
     </div>
 
@@ -96,8 +94,7 @@ const inputRef = ref<HTMLInputElement>()
 
 const localContact = ref<Omit<IContact, 'id'>>({
   name: '',
-  description: '',
-  image: ''
+  description: ''
 })
 
 const nameAbbrv = computed(() => {
@@ -123,5 +120,4 @@ function onSave () {
   editMode.value = false
 }
 
-const imageHasError = ref(false)
 </script>
