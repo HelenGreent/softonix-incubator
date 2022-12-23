@@ -32,7 +32,7 @@ export const useContactsStore = defineStore('contactsStore', () => {
   async function deleteContact (contact: IContact) {
     try {
       const currentIndex = contacts.value.findIndex(c => c.id === contact.id)
-      await contactsService.deleteContact(contact.id)
+      await contactsService.deleteContact(contact)
       contacts.value.splice(currentIndex, 1)
     } catch (err) {
       console.error(err)

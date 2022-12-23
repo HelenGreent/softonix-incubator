@@ -44,7 +44,7 @@ function createNewContact () {
   router.push({ name: $routeNames.upsertContact, params: { contactId: 'new' } })
 }
 
-function editContact (contactId: number) {
+function editContact (contactId: number | undefined) {
   router.push({ name: $routeNames.upsertContact, params: { contactId } })
 }
 

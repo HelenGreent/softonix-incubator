@@ -1,21 +1,22 @@
 class ContactsService {
   // rest/v1/contacts
-  getContacts () {
+  getContacts() {
     return useHttp.get<IContact[]>('rest/v1/contacts')
   }
 
-  addContact (payload: IContact) {
+  addContact(payload: IContact) {
     const { ...rest } = payload
     return useHttp.post('rest/v1/contacts', rest)
   }
 
-  updateContact (payload: IContact) {
+  updateContact(payload: IContact) {
     const { id, ...rest } = payload
     return useHttp.patch(`rest/v1/contacts?id=eq.${id}`, rest)
   }
 
-  deleteContact (id: number) {
-    return useHttp.delete(`rest/v1/contacts?id=eq.${id}`)
+  deleteContact(payload: IContact) {
+    console.log('payload', payload)
+    return useHttp.delete(`rest/v1/contacts?id=eq.${payload.id}`)
   }
 }
 

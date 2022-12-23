@@ -45,7 +45,6 @@ const cardTitle = computed(() => {
 const contactForm = reactive<IContact>(currentContact.value
   ? { ...currentContact.value }
   : {
-    id: contacts.length + 1,
     name: '',
     description: ''
   })
