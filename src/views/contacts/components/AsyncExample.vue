@@ -1,9 +1,9 @@
-<template>
+<!-- <template>
   Example of async component
-</template>
+</template> -->
 
 <script lang="ts" setup>
 setTimeout(() => {
-  console.log('hurra')
+  // console.log('hurra')
 }, 3000)
 </script>
