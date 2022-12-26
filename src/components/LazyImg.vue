@@ -8,7 +8,8 @@
   >
   <div
     v-else
-    ref="smth"
+    ref="imgError"
+    class="w-[300px] h-[300px] bg-white"
   />
 </template>
 
@@ -19,7 +20,7 @@ const props = defineProps<{
 defineEmits(['error', 'load'])
 
 const isObserved = ref(false)
-const smth = ref<HTMLDivElement>()
+const imgError = ref<HTMLDivElement>()
 
 const observer = new IntersectionObserver(loadingImg)
 
@@ -35,7 +36,7 @@ function loadingImg (entries: any, observer: any) {
   })
 }
 
-watch(() => smth.value, newValue => {
+watch(() => imgError.value, newValue => {
   if (!newValue) return
   observer.observe(newValue)
 })
