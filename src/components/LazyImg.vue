@@ -22,7 +22,7 @@ defineEmits(['error', 'load'])
 const isObserved = ref(false)
 const imgError = ref<HTMLDivElement>()
 
-const observer = new IntersectionObserver(loadingImg)
+const observer = new IntersectionObserver(loadingImg, { rootMargin: '300px' })
 
 function loadingImg (entries: any, observer: any) {
   entries.forEach((entry: any) => {
@@ -31,8 +31,6 @@ function loadingImg (entries: any, observer: any) {
       observer.unobserve(entry.target)
       isObserved.value = true
     }
-  }, {
-    rootMargin: '300px'
   })
 }
 
